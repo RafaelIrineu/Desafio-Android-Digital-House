@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">DesafioAndroid</string>
     <string name="splash_de_comida">splash de comida</string>
+    <string name="login">LOG IN</string>
+    <string name="register">REGISTER</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="or">OR</string>
 </resources>
