@@ -14,6 +14,7 @@
         android:hint="@string/email">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtEmailRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -33,6 +34,7 @@
         android:hint="@string/name">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -52,7 +54,7 @@
         app:errorEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password_edit_text"
+            android:id="@+id/edtPasswordRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -65,7 +67,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/password_text_input_repeat"
+        android:id="@+id/password_repeat_text_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/repeat_password"
@@ -73,7 +75,7 @@
         app:errorEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password_edit_text_repeat"
+            android:id="@+id/edtPasswordRepeat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
