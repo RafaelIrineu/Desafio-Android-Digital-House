@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".RegisterActivity">
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -19,6 +19,25 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:inputType="textEmailAddress"
+            android:singleLine="true"
+            android:textColor="@color/txtLoginRegister"
+            app:errorEnabled="true" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="@string/name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:inputType="text"
             android:singleLine="true"
             android:textColor="@color/txtLoginRegister"
             app:errorEnabled="true" />
@@ -45,6 +64,27 @@
             app:errorEnabled="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_text_input_repeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/repeat_password"
+        android:textColorHint="@color/txtHint"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_edit_text_repeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/txtLoginRegister"
+            android:textColorHint="@color/txtHint"
+            app:errorEnabled="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -54,50 +94,12 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="25dp"
-            android:background="@color/btnPrincipal"
-            android:foreground="?android:attr/selectableItemBackgroundBorderless"
-            android:text="@string/login"
-            android:textColor="@color/txtBtn"
-            android:textSize="15sp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-
-            <View
-                android:layout_width="140dp"
-                android:layout_height="1dp"
-                android:layout_marginTop="40dp"
-                android:background="@color/colorBlack" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:text="   OR   " />
-
-            <View
-                android:layout_width="165dp"
-                android:layout_height="1dp"
-                android:layout_marginTop="40dp"
-                android:background="@color/colorBlack" />
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/btnGoToRegister"
+            android:id="@+id/btnRegister"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="90dp"
-            android:background="@color/btnSecundario"
+            android:background="@color/btnPrincipal"
             android:foreground="?android:attr/selectableItemBackgroundBorderless"
             android:text="@string/register"
             android:textColor="@color/txtBtn"
