@@ -4,7 +4,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class RestaurantAdapter(private val dataSet: List<Restaurant>, private val listener: (Restaurant) -> Unit):
+class RestaurantAdapter(
+    private val dataSet: List<Restaurant>,
+    private val listener: (Restaurant) -> Unit
+) :
     RecyclerView.Adapter<RestaurantViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RestaurantViewHolder {

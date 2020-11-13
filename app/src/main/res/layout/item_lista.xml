@@ -7,7 +7,7 @@
     android:layout_margin="5dp"
     android:orientation="horizontal"
     app:cardBackgroundColor="@color/colorWhite"
-    app:cardCornerRadius="20dp">
+    app:cardCornerRadius="10dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,50 +16,52 @@
         <ImageView
             android:id="@+id/restaurantImage"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@mipmap/ic_launcher_round"
-            android:scaleType="centerCrop"/>
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/tony_romas" />
 
-            <TextView
-                android:id="@+id/listRestaurantName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:ellipsize="end"
-                android:singleLine="true"
-                android:text="Name"
-                android:textColor="@color/colorBlack"
-                android:textSize="35sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/restaurantImage"/>
+        <TextView
+            android:id="@+id/listRestaurantName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="Name"
+            android:textColor="@color/colorBlack"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/restaurantImage" />
 
-            <TextView
-                android:id="@+id/listRestaurantAddress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:singleLine="true"
-                android:text="Adress"
-                android:textColor="@color/colorBlack"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/listRestaurantName"/>
+        <TextView
+            android:id="@+id/listRestaurantAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Address"
+            android:textColor="@color/colorAddress"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/listRestaurantName" />
 
-            <TextView
-                android:id="@+id/listRestaurantHour"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:singleLine="true"
-                android:text="Hour"
-                android:textColor="@color/colorBlack"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/listRestaurantAddress"/>
+        <TextView
+            android:id="@+id/listRestaurantHour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Hour"
+            android:textColor="@color/colorHour"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/listRestaurantAddress" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
