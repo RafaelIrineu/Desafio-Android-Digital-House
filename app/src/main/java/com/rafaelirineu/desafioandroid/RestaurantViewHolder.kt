@@ -1,10 +1,12 @@
 package com.rafaelirineu.desafioandroid
 
+import android.media.Image
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.rafaelirineu.desafioandroid.R.mipmap
+import com.squareup.picasso.Picasso
 
 class RestaurantViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
@@ -13,10 +15,14 @@ class RestaurantViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val endereco: TextView = view.findViewById(R.id.listRestaurantAddress)
     private val horaFuncionamento: TextView = view.findViewById(R.id.listRestaurantHour)
 
-    fun bind(restaurantName: String, restaurantAddress: String, restaurantHora: String) {
+    fun bind(restaurant: Restaurant) {
 
-        nome.text = restaurantName
-        endereco.text = restaurantAddress
-        horaFuncionamento.text = restaurantHora
+        nome.text = restaurant.nome
+        endereco.text = restaurant.address
+        horaFuncionamento.text = restaurant.horario
+
+        Picasso.get()
+            .load(restaurant.imagem)
+            .into(foto)
     }
 }

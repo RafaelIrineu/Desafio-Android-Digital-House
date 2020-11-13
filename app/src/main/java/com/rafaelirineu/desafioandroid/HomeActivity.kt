@@ -18,13 +18,13 @@ class HomeActivity : AppCompatActivity() {
 
         val restaurantes = arrayListOf(
             Restaurant("Tony Roma's", "Av. Lavandisca, 717 - Indianópolis, São Paulo",
-                "Fecha às 22:00"),
+                "Fecha às 22:00",R.drawable.tony),
             Restaurant("Aoyama - Moema","Alameda dos Arapanés, 532 - Moema",
-                "Fecha às 00:00"),
+                "Fecha às 00:00",R.drawable.aoyama),
             Restaurant("Outback - Moema", "Av. Moaci, 187, 187 - Moema, São Paulo",
-                "Fecha às 00:00"),
+                "Fecha às 00:00",R.drawable.outback),
             Restaurant("Sí Señor!","Alameda Jauaperi, 626 - Moema",
-                "Fecha às 01:00")
+                "Fecha às 01:00",R.drawable.sisenor)
         )
 
         val viewManager = LinearLayoutManager(this)
@@ -32,6 +32,7 @@ class HomeActivity : AppCompatActivity() {
 
         val viewAdapter = RestaurantAdapter(restaurantes) {
             var intent = Intent(this@HomeActivity, RestaurantDetail::class.java)
+            intent.putExtra("Imagem",it.imagem)
             intent.putExtra("Nome do Restaurante", it.nome)
             startActivity(intent)
         }

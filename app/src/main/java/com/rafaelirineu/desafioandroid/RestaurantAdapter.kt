@@ -19,8 +19,9 @@ class RestaurantAdapter(
     override fun getItemCount() = dataSet.size
 
     override fun onBindViewHolder(holder: RestaurantViewHolder, position: Int) {
-        holder.bind(dataSet[position].nome, dataSet[position].address, dataSet[position].horario)
+        val item = dataSet[position]
+        holder.bind(item)
 
-        holder.itemView.setOnClickListener { listener(dataSet[position]) }
+        holder.itemView.setOnClickListener { listener(item) }
     }
 }
