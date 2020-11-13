@@ -12,4 +12,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="campo_vazio">Campo vazio</string>
     <string name="senha_diferente">A senha não confere</string>
+    <string name="imagem_do_resturante">Imagem do Resturante</string>
+    <string name="nome_restaurante">Nome Restaurante</string>
+    <string name="pratos_principais">Pratos Principais</string>
 </resources>

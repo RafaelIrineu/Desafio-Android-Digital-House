@@ -13,4 +13,5 @@
     <color name="colorAddress">#6A6A6A</color>,
     <color name="colorHour">#6A6A6A</color>
     <color name="cardBackground">#6A6A6A</color>
+    <color name="textCards">#8C8C8C</color>
 </resources>
