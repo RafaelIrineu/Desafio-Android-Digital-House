@@ -24,8 +24,9 @@ class RestaurantDetail : AppCompatActivity() {
             Prato("Salada com molho de gengibre", R.drawable.aoyama))
 
         val viewAdapter = RestaurantDetailAdapter(pratos) {
-            var intent = Intent(this@RestaurantDetail, Prato::class.java)
-            intent.putExtra("Nome do Prato", it.nome)
+            var intent = Intent(this@RestaurantDetail, DetalhePrato::class.java)
+            intent.putExtra("nome_do_prato", it.nome)
+            intent.putExtra("Foto",it.imagem)
             startActivity(intent)
         }
 
