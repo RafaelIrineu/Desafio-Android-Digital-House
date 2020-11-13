@@ -16,7 +16,8 @@ class MainActivity : AppCompatActivity() {
 
         btnLogin.setOnClickListener {
             if (validaCamposLogin()) {
-
+                val intent = Intent(this, HomeActivity::class.java)
+                startActivity(intent)
             }
         }
 
@@ -27,19 +28,19 @@ class MainActivity : AppCompatActivity() {
 
     }
     
-    fun validaCamposLogin(): Boolean {
+    private fun validaCamposLogin(): Boolean {
 
-        val emailLogin = edtEmailLogin.text.toString().trim()
-        val passwordLogin = edtPasswordLogin.text.toString().trim()
+        val emailLogin = edtEmailLogin.text
+        val passwordLogin = edtPasswordLogin.text
 
         var resultado = true
 
-        if (emailLogin.isEmpty()) {
-            edtEmailLogin.error = "Campo vazio"
+        if (emailLogin.isNullOrEmpty()) {
+            edtEmailLogin.error = getString(R.string.campo_vazio)
             resultado = false
         }
-        if (passwordLogin.isEmpty()) {
-            edtPasswordLogin.error = "Campo vazio"
+        if (passwordLogin.isNullOrEmpty()) {
+            edtPasswordLogin.error = getString(R.string.campo_vazio)
             resultado = false
         }
         return resultado

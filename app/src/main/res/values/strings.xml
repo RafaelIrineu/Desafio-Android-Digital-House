@@ -8,4 +8,8 @@
     <string name="or">OR</string>
     <string name="name">Name</string>
     <string name="repeat_password">Repeat password</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="campo_vazio">Campo vazio</string>
+    <string name="senha_diferente">A senha não confere</string>
 </resources>

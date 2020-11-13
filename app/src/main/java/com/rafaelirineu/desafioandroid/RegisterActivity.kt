@@ -23,7 +23,7 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
-    fun validaCampos(): Boolean {
+    private fun validaCampos(): Boolean {
 
         val emailRegistro = edtEmailRegister.text.toString().trim()
         val name = edtName.text.toString().trim()
@@ -33,23 +33,23 @@ class RegisterActivity : AppCompatActivity() {
         var resultado = true
 
         if (emailRegistro.isEmpty()) {
-            edtEmailRegister.error = "Campo vazio"
+            edtEmailRegister.error = getString(R.string.campo_vazio)
             resultado = false
         }
         if (name.isEmpty()) {
-            edtName.error = "Campo vazio"
+            edtName.error = getString(R.string.campo_vazio)
             resultado = false
         }
         if (passwordRegistro.isEmpty()) {
-            edtPasswordRegister.error = "Campo vazio"
+            edtPasswordRegister.error = getString(R.string.campo_vazio)
             resultado = false
         }
         if (passwordRepeat.isEmpty()) {
-            edtPasswordRepeat.error = "Campo vazio"
+            edtPasswordRepeat.error = getString(R.string.campo_vazio)
             resultado = false
         }
         if (passwordRegistro != passwordRepeat) {
-            edtPasswordRepeat.error = "A senha não confere"
+            edtPasswordRepeat.error = getString(R.string.senha_diferente)
             resultado = false
         }
         return resultado
